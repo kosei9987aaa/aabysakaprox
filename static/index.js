@@ -46,20 +46,6 @@ function particleSelect(param) {
 
 }
 
-var chosenAdState = localStorage.getItem("adState") || "adchangeon";
-
-if (chosenAdState === "adchangeon") {
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.async = 'async';
-  script.src = '//thubanoa.com/1?z=7482778';
-  document.head.appendChild(script);
-  var script2 = document.createElement('script');
-  script2.innerHTML = `(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('osspalkiaom.com',7482795,document.createElement('script'))`
-  document.head.appendChild(script2);
-  var script3 = document.createElement('script');
-  script3.innerHTML = `(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('oaphoace.net',7482785,document.createElement('script')`
-  document.head.appendChild(script3);
 } 
 
 function adChange(parse) {
@@ -69,7 +55,7 @@ function adChange(parse) {
     e.classList.remove("active");
   });
   document.querySelectorAll("." + parse).forEach((e) => {
-    e.classList.add("active");
+    e.classList.remove("active");
 }
   )
 }
